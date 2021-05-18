@@ -1,3 +1,5 @@
+//Nathan and Lucas
+
 public class Multithread{
   public static void main(String[] args){
 		long start = System.currentTimeMillis();        
