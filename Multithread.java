@@ -1,4 +1,4 @@
-//Nathan and Lucas
+//Lucas, Nathan, and Navid
 
 public class Multithread{
   public static void main(String[] args){
