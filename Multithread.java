@@ -2,15 +2,17 @@
 
 public class Multithread{
   public static void main(String[] args){
-		long start = System.currentTimeMillis();        
+		       
 		int n = 10;
 		String maxAccount = "";
 		double maxValue = 0.0;
+		AccountReader[] accounts = new AccountReader[10];
+		long start = System.currentTimeMillis(); 
         for (int i = 0; i < n; i++) {
-            AccountReader object= new AccountReader();
-            object.start();
+            accounts[i] = new AccountReader ();
+            accounts[i].start();
             String filename = "Accounts/Accounts "+i+".txt";
-            String data = object.checkAccountBalances (filename);
+            String data = accounts[i].checkAccountBalances (filename);
             int cutoff = data.indexOf ("\t");
             String numWord = data.substring (cutoff,data.length());
         	double num = Double.parseDouble (numWord);
